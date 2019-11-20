@@ -1,4 +1,4 @@
-package pl.waskicompany.netguru.netgururecruitmenttask.models;
+package pl.waskicompany.netguru.netgururecruitmenttask.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.hibernate.annotations.OnDelete;

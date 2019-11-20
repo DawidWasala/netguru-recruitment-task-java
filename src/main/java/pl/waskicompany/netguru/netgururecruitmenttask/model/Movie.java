@@ -1,5 +1,7 @@
-package pl.waskicompany.netguru.netgururecruitmenttask.models;
+package pl.waskicompany.netguru.netgururecruitmenttask.model;
 
+
+import com.google.gson.annotations.SerializedName;
 
 import javax.persistence.*;
 
@@ -10,7 +12,8 @@ public class Movie {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String Title;
+    @SerializedName(value = "Title")
+    private String title;
     private String Year;
     private String Rated;
     private String Released;
@@ -35,7 +38,7 @@ public class Movie {
     public String toString() {
         return "Movie{" +
                 "id=" + id +
-                ", Title='" + Title + '\'' +
+                ", title='" + title + '\'' +
                 ", Year='" + Year + '\'' +
                 ", Rated='" + Rated + '\'' +
                 ", Released='" + Released + '\'' +
@@ -67,11 +70,11 @@ public class Movie {
     }
 
     public String getTitle() {
-        return Title;
+        return title;
     }
 
     public void setTitle(String title) {
-        Title = title;
+        this.title = title;
     }
 
     public String getYear() {
